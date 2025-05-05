@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="purchase-page">
+
+    <h2>Оформление заказа на джерси</h2>
+
+    <form id="order-form">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" required placeholder="Введите ваше имя">
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" required placeholder="+7 (___) ___-__-__">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required placeholder="Введите ваш email">
+
+        <label for="jur-model">Цвет формы:</label>
+        <select id="jur-model" required>
+            <option value="">Выберите модель</option>
+            <option value="jur_red_fan">Фанатская красная джерси</option>
+            <option value="jur_white_fan">Фанатская белая джерси</option>
+            <option value="jur_red_pro">Игровая красная джерси</option>
+            <option value="jur_white_pro">Игровая белая джерси</option>
+        </select>
+
+        <label for="comment">Комментарий:</label>
+        <textarea id="comment" rows="4" placeholder="Дополнительные пожелания"></textarea>
+
+        <button type="submit">Отправить заявку</button>
+    </form>
+
+    <h3 id="success-message" class="hidden">Спасибо! С вами свяжутся в ближайшее время.</h3>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

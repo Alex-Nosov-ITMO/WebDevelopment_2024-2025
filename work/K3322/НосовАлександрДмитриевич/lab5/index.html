@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта изображений BMW M5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="index-page">
+
+    <h1 id="ava-title">Данный сайт посвящен хоккейной команде "Авангард"</h1>
+
+    <img src="ava_black.jpg" usemap="#ava-map" id="ava-image">
+
+    <map name="ava-map">
+        <!-- Ниже логотипа (Меняет изображение) -->
+        <area shape="rect" coords="299,1032,739,1472" alt="Живот" href="#" onclick="changeImage(event)">
+
+        <!-- Кисти (Выводит сообщение) -->
+        <area shape="circle" coords="822,1383,88" alt="Правая кисть" href="#" onclick="showWheelAlert()">
+        <area shape="circle" coords="186,1442,96" alt="Левая кисть" href="#" onclick="showWheelAlert()">
+
+        <!-- Логотип (Ссылка на сайт) -->
+        <area shape="poly" coords="269,838,493,761,693,789,727,852,719,920,480,1028" alt="Логотип"
+              href="https://www.hawk.ru/" target="_blank">
+
+        <!-- Голова (Меняет цвет) -->
+        <area shape="circle" coords="509,246,182" alt="Голова" href="#" onclick="changeTitleColor(event)">
+
+        <!-- Плечи и грудь (Ссылка на видео) -->
+        <area shape="poly"  coords="199,761,241,616,357,531,482,465,620,457,724,468,825,525,887,718" alt="Плечи и грудь"
+              href="https://rutube.ru/video/599121c5fe28902e9870406e46a68057/" target="_blank">
+
+        <!-- Брюки (Страница оформления покупки) -->
+        <area shape="rect" coords="281,1491,806,1676" alt="Покупка" href="purchase.html">
+    </map>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
