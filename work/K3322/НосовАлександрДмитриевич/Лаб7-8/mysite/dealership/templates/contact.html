@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Контакты - Автомобили Баварии{% endblock %}
+
+{% block content %}
+<div class="contact-container">
+    <h2 class="contact-title">Свяжитесь с нами</h2>
+    <p class="contact-description">
+        Если у вас есть вопросы по моделям, сервисному обслуживанию или вы хотите записаться на тест-драйв — заполните форму ниже, и мы свяжемся с вами.
+    </p>
+
+    <form class="contact-form" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {% for field in form %}
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+            {% if field.errors %}
+                <div class="error">{{ field.errors|striptags }}</div>
+            {% endif %}
+        {% endfor %}
+        <button type="submit" class="submit-button">Отправить сообщение</button>
+    </form>
+</div>
+{% endblock %}

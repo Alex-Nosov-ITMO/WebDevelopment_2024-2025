@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - SHOP AVANGARD{% endblock %}
+
+{% block content %}
+<!-- <h2>T-shirts</h2> -->
+<div class="card-container">
+    {% for product in t_shirts %}
+        <div class="product-card">
+            <img src="{{ product.image.url }}" alt="{{ product.model_name }}">
+            <h3 class="product-name">{{ product.name }} </h3>
+            <p>Price: {{ product.price }} руб.</p>
+            <p>Size: {{ product.size }}</p>
+            <p>Color: {{ product.color }}</p>
+            <p>{{ product.description }}</p>
+        </div>
+    {% endfor %}
+</div>
+<h2>Hoodies and T-shirts</h2>
+<div class="card-container">
+    {% for product in hoodies %}
+        <div class="product-card">
+            <img src="{{ product.image.url }}" alt="{{ product.model_name }}">
+            <h3 class="product-name">{{ product.name }} </h3>
+            <p>Price: ${{ product.price }}</p>
+            <p>Size: {{ product.size }}</p>
+            <p>Color: {{ product.color }}</p>
+            <p>{{ product.description }}</p>
+    {% endfor %}
+</div>
+{% endblock %}
